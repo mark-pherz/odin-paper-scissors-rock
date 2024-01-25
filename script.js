@@ -38,7 +38,7 @@ function playRound(playerSelection, computerSelection) {
 // const playerSelection = prompt("Choose paper scissors or rock", "scissors");
 // const computerSelection = getComputerChoice();
 
-// console.log(`Your choice is ${playerSelection.toLowerCase()}`);
+// // console.log(`Your choice is ${playerSelection.toLowerCase()}`);
 // console.log(`Computer choice is ${computerSelection}`);
 // console.log(playRound(playerSelection, computerSelection));
 
@@ -50,23 +50,22 @@ function game() {
     const playerSelection = prompt("Choose paper scissors or rock", "scissors");
     const computerSelection = getComputerChoice();
     console.log(playRound(playerSelection, computerSelection));
-    if (playRound(playerSelection, computerSelection).charAt(0) === "Y"){
+    if (playRound(playerSelection, computerSelection).charAt(0) === "Y") {
       playerScore = playerScore + 1;
     }
-    if (playRound(playerSelection, computerSelection).charAt(0) === "C"){
+    if (playRound(playerSelection, computerSelection).charAt(0) === "C") {
       computerScore = computerScore + 1;
-    } 
+    }
     gameCount++;
   }
-  
-  if (playerScore > computerScore) {
-    console.log("You won the tournament")
-  } else if (computerScore > playerScore ) {
-    console.log("Computer won the tournament")
-  } else {
-    console.log("Tournament is a scam.")
-  }
 
+  if (playerScore > computerScore) {
+    console.log("You won the tournament");
+  } else if (computerScore > playerScore) {
+    console.log("Computer won the tournament");
+  } else {
+    console.log("Tournament is a scam.");
+  }
 }
 
 game();
